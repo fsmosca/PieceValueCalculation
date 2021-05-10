@@ -39,8 +39,10 @@ Factors are used to scale the criteria accross different piece types. These fact
 `final_value = distance_mobility + direction_mobility – color_bound_penalty`
 
 ### Example calculation
+The first step is to place the piece in E4 square. Then calculate the distance mobility from critera 1, direction mobility from criteria 2 and color-bound penalty from criteria 3. These three values are added to get the final estimate of the piece value.
+
 #### A. Queen
-Location square: E4  
+Location square: E4
 Variant: chess  
 
 #### 1. Mobility at specific distances  
