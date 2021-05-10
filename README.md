@@ -92,9 +92,15 @@ direction_mobility = 8 x 8 = 64
 ```
 
 #### 3. Color bound penalty
-Penalty is zero because a queen can move to a different color from its reference square at E4.
+Penalty is zero because a queen can move to a different color from its reference square at E4. However if a piece to be evaluated is color-bound like the bishop piece type then we will use `Formula 2`.
 
-Final value will be the sum of the distance mobility plus direction mobility less penalty or simply the `general formula`.
+`color_bound_penalty = 0`
+
+#### Formula 2
+`color_bound_penalty = (distance_mobility + direction_mobility) / 3`
+
+#### Final queen value
+Queen final value will be the sum of the distance mobility plus direction mobility less color-bound penalty.
 
 ```
 final_queen_value = distance_mobility + direction_mobility – color_bound_penalty
